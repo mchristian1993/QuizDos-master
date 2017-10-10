@@ -3,6 +3,7 @@ package com.jonmid.quizdos.Adapters;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jonmid.quizdos.R;
@@ -30,19 +31,23 @@ public class UserAdapterAnguloChristian extends RecyclerView.Adapter<UserAdapter
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-         name;
-         username;
-         email;
-         phone;
-         namecompany;
-         address;
-         urlimage_user;
+        TextView name;
+        TextView username;
+         TextView email;
+        TextView  phone;
+         TextView namecompany;
+        TextView address;
+       ImageView urlimage_user;
 
         public ViewHolder(View item) {
             super(item);
-            textViewName = (TextView) item.findViewById(R.id.id_tv_item_namecountry);
-            textViewCapital = (TextView) item.findViewById(R.id.id_tv_item_namecapital);
-            textViewAlphs = (TextView) item.findViewById(R.id.id_tv_item_nameabbreviation);
+            name = (TextView) item.findViewById(R.id.id_tv_userinput_name);
+            username = (TextView) item.findViewById(R.id.id_tv_userinput_username);
+            email = (TextView) item.findViewById(R.id.id_tv_userinput_email);
+            phone = (TextView) item.findViewById(R.id.id_tv_userinput_phone);
+            namecompany = (TextView) item.findViewById(R.id.id_tv_userinput_namecompany);
+            address = (TextView) item.findViewById(R.id.id_tv_userinput_address);
+            urlimage_user = ( ImageView) item.findViewById(R.id.imageView);
         }
     }
 }

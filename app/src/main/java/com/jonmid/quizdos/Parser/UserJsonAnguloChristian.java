@@ -26,11 +26,11 @@ public class UserJsonAnguloChristian {
             user.setEmail(item.getString("email"));
             user.setPhone(item.getString("phone"));
 
-            JSONArray item1 = item.getJSONArray("address");
-            user.setAddress(item1.getString(0));
+            JSONObject item1 = item.getJSONObject("address");
+            user.setAddress(item1.getString("street"));
 
-            JSONArray item2 = item.getJSONArray("company");
-            user.setAddress(item2.getString(0));
+            JSONObject item2 = item.getJSONObject("company");
+            user.setNamecompany(item2.getString("name"));
 
             userList.add(user);
         }
