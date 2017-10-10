@@ -18,7 +18,7 @@ import java.util.List;
  * Created by CHRISTIAN on 10/10/2017.
  */
 
-public class UserAdapterAnguloChristian extends RecyclerView.Adapter<UserAdapterAnguloChristian.ViewHolder>{
+public class UserAdapterAnguloChristian extends RecyclerView.Adapter<UserAdapterAnguloChristian.ViewHolder> {
 
     List<UserModelAnguloChristian> userList = new ArrayList<>();
     Context context;
@@ -43,7 +43,14 @@ public class UserAdapterAnguloChristian extends RecyclerView.Adapter<UserAdapter
     public void onBindViewHolder(UserAdapterAnguloChristian.ViewHolder holder, int position) {
         holder.name.setText(userList.get(position).getName());
 
+        holder.username.setText(userList.get(position).getUsername());
 
+        holder.phone.setText(userList.get(position).getPhone());
+
+        holder.namecompany.setText(userList.get(position).getNamecompany());
+        holder.address.setText(userList.get(position).getAddress());
+
+        holder.email.setText(userList.get(position).getEmail());
 
     }
 
@@ -55,11 +62,11 @@ public class UserAdapterAnguloChristian extends RecyclerView.Adapter<UserAdapter
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         TextView username;
-         TextView email;
-        TextView  phone;
-         TextView namecompany;
+        TextView email;
+        TextView phone;
+        TextView namecompany;
         TextView address;
-       ImageView urlimage_user;
+        ImageView urlimage_user;
 
         public ViewHolder(View item) {
             super(item);
@@ -69,7 +76,7 @@ public class UserAdapterAnguloChristian extends RecyclerView.Adapter<UserAdapter
             phone = (TextView) item.findViewById(R.id.id_tv_userinput_phone);
             namecompany = (TextView) item.findViewById(R.id.id_tv_userinput_namecompany);
             address = (TextView) item.findViewById(R.id.id_tv_userinput_address);
-            urlimage_user = ( ImageView) item.findViewById(R.id.imageView);
+            urlimage_user = (ImageView) item.findViewById(R.id.imageView);
         }
     }
 }
